@@ -20,12 +20,13 @@ class NewsProv {
       jsonData["articles"].forEach((element) {
         if (element["urlToImage"] != null && element["description"] != null) {
           News newnews = News(
-              author: element["auther"],
+              author: element["author"],
               content: element["content"],
               description: element["description"],
               title: element["title"],
               url: element["url"],
-              urlToImage: element["urlToImage"]);
+              urlToImage: element["urlToImage"],
+              publishedAt: element["publishedAt"]);
           newsUs.add(newnews);
         }
       });

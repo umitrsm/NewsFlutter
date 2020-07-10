@@ -45,7 +45,7 @@ class _MainScreenState extends State<MainScreen> {
           ? Center(
               child: CircularProgressIndicator(),
             )
-          : Column(
+          : ListView(
               children: <Widget>[
                 Container(
                   height: MediaQuery.of(context).size.height * 0.4,
@@ -53,7 +53,14 @@ class _MainScreenState extends State<MainScreen> {
                       controller: pageController,
                       itemCount: itemCount,
                       itemBuilder: (context, position) {
-                        return Container(
+                        return InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              'newsdetails',
+                              arguments: position,
+                            );
+                          },
                           child: imageSlider(position),
                         );
                       }),

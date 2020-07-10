@@ -5,15 +5,16 @@ class News {
   String url;
   String urlToImage;
   String content;
-  DateTime publishedAt;
-  News({
-    this.author,
-    this.title,
-    this.description,
-    this.url,
-    this.urlToImage,
-    this.content,
-  });
+  String publishedAt;
+
+  News(
+      {this.author,
+      this.title,
+      this.description,
+      this.url,
+      this.urlToImage,
+      this.content,
+      this.publishedAt});
 /*  factory News.fromJSON(Map<String, dynamic> json) {
     return News(
         author: json["auther"],
