@@ -110,27 +110,20 @@ class _MainScreenState extends State<MainScreen> {
                 fit: BoxFit.fill,
               ),
               Positioned(
-                bottom: 60,
-                height: 60,
-                child: Padding(
-                  padding: const EdgeInsets.all(2),
-                  child: Container(
-                    padding: EdgeInsets.symmetric(
-                      vertical: 5,
-                      horizontal: 20,
+                bottom: 0,
+                child: Container(
+                  color: Colors.black87,
+                  padding: EdgeInsets.all(5),
+                  height: 80,
+                  width: 400,
+                  child: Text(
+                    newsus[index].title,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 21,
                     ),
-                    color: Colors.black54,
-                    child: ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxHeight: 100,
-                        minHeight: 20,
-                        maxWidth: double.infinity,
-                      ),
-                      child: Text(
-                        newsus[index].title,
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
               ),

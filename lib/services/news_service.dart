@@ -11,7 +11,7 @@ class NewsProv {
 
   Future<void> getNewsUs() async {
     String url =
-        "https://newsapi.org/v2/top-headlines?country=us&pageSize=10&apiKey=1784eb677bb34338a3d8b5ebb53959f4";
+        "https://newsapi.org/v2/top-headlines?country=us&pageSize=14&apiKey=1784eb677bb34338a3d8b5ebb53959f4";
     var response = await http.get(url);
 
     var jsonData = jsonDecode(response.body);
